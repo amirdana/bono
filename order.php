@@ -28,19 +28,7 @@ if(isset($_POST['dissub'])){
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="./bootstrap.min.css">
-		<title>تبدیل عکس شما به نقاشی</title>
-	</head>
-	<body>
-		
-				
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -49,7 +37,8 @@ if(isset($_POST['dissub'])){
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./bootstrap.min.css">
     <title>Checkout example for Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">

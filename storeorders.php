@@ -250,15 +250,15 @@ if(isset($_POST['cupdel'])){
           <p><?php echo $ins['des'] ?></p>
          
         </div>
-        <div class="col-md-3 order-box text-dark <?php echo ($ins['payed']=="yes")? "success" : "failed";  ?>">
-         
+        <div class="col-md-3 order-box text-dark <?php echo ($ins['payedamount']!=0)? "success" : "failed";  ?>">
           <h1><?php echo $ins['id'] ?> ID</h1>
-          <h3><?php  echo ($ins['payed']=="yes")? "پرداخت شد" : "ناموفق" ?></h3>
+          <h3><?php  echo ($ins['payedamount']!=0)? "پرداخت شد" : "ناموفق" ?></h3>
+          <?php echo $_SESSION['pass'] == 'a80809090'?  '<h2>'.$ins['payedamount'].' t'.'</h2>': '' ?>
         </div>
       </div>
     </div>
   <?php endforeach ?>
- 
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script>
