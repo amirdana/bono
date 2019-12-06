@@ -27,6 +27,14 @@ session_start();
           <li>نمونه ها</li>
        </ul>
       </div>
+
+
+
+      
+
+
+
+
       <div data-toggle="tooltip"
       data-placement="top" title="سوالی دارید؟ از ما بپرسید" class="support ">
         <img data-container="body"
@@ -61,6 +69,7 @@ session_start();
                     <img src="srcs/layers.svg" alt="order">
                     <div class="h-cnt">
                     <h4>دریافت</h4>
+                    <hr>
                       <p>حال میتوانید طراحی خود را دانلود یا در صورت تمایل نسخه فیزیکی آن را دریافت کنید</p>
                 </div>
             </div>
@@ -68,6 +77,7 @@ session_start();
             <img src="srcs/graphic-tablet.svg" alt="order">
             <div class="h-cnt">
               <h4>طراحی</h4>
+              <hr>
               <p>طراحان گرافیک ما با توجه به عکس شما یک نمونه نقاشی شده از آن را خلق میکنند</p>
             </div>
           </div>
@@ -75,6 +85,7 @@ session_start();
               <img src="srcs/layer.svg" alt="order">
               <div class="h-cnt">
               <h4>انتخاب عکس</h4>
+              <hr>
               <p>در این مرحله عکس تکی یا چند نفره مورد علاقه خود را روی سایت بارگذاری میکنید</p>
             </div>
           </div>
@@ -152,14 +163,15 @@ session_start();
         <div class="card-header  " role="tab" id="headingOne">
           <h5 class="mb-0">
             <a class="text-dark " data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-             زمان تحویل چقدر است؟
+              میشه خودمون فایل رو از سایت دانلود و چاپ کنیم؟
             </a>
           </h5>
         </div>
         </div>
         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
           <div class="card-body ">
-            اثر شما بعد از ثبت سفارش نهایتا طی دو تا سه روز آماده خواهد شد و قابل دانلود است ، ولی اگر دریافت فیزیکی را هم درخواست کرده بودید حدودا یه هفته برای تهرانی ها و دو هفته برای استان های دیگر زمان اضافه میشود
+            بله، میتونید روی هر نوع کاغذ, مثل یک پرینت گرفتن معمولی طرح خودتون رو چاپ کنید و نیاز به تحویل فیزیکی ندارید ولی اگر به هر دلیلی توانایی چاپ کردن را ندارید ما برای شما انجامش میدیم
+
           </div>
         </div>
       </div>
@@ -168,14 +180,15 @@ session_start();
         <div class="card-header " role="tab" id="headingTwo">
           <h5 class="mb-0">
             <a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              میشه خودمون فایل رو از سایت دانلود و چاپ کنیم؟
+            زمان تحویل چقدر است؟
             </a>
           </h5>
         </div>
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="card-body">
-            بله، میتونید روی هر جنس ورق چاپ کرده و نیاز به تحویل فیزیکی ندارید ولی اگر به هر دلیلی توانایی چاپ کردن را ندارید ما برای شما انجامش میدیم
+          اثر شما بعد از ثبت سفارش نهایتا طی دو تا سه روز آماده خواهد شد و قابل دانلود است ، ولی اگر دریافت فیزیکی را هم درخواست کرده بودید حدودا یه هفته برای تهرانی ها و دو هفته برای استان های دیگر زمان اضافه میشود
+
           </div>
         </div>
       </div>
@@ -192,13 +205,63 @@ session_start();
         </div>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="card-body">
-          مثل یک پرینت گرفتن معمولی میتوانید روی هر نوع و جنس ورق های سری (آ) و هر نوع دیگری که نسبت های طول به عرض مشابهی دارند طرح خود را چاپ کنید البته بدیهی است که جنس ورق و کیفت چاپ حرفه ای نتیجه بهتری حاصل میکنه          </div>
-        </div>
+          مثل یک پرینت گرفتن معمولی میتوانید روی هر نوع و جنس ورق های سری (آ) و هر نوع دیگری که نسبت های طول به عرض مشابهی دارند طرح خودتون رو چاپ کنید البته مشخصه که جنس ورق خوب و کیفت چاپ حرفه ای نتیجه بهتری حاصل میکنه          </div>
+          </div>
       </div>
       
       </div>
     </div>
     </section>
+    <footer>
+      <div>
+        <div class="myfooter bg-dark m-0 row px-5">
+            
+            <div class="col-md-2 d-flex flex-column justify-content-center text-right ">
+           
+              <h3 class="">نماد ها</h3>
+              <hr class="bg-white mb-4">
+            </div>
+            <div class="col-md-2 d-flex flex-column justify-content-center text-right">
+            
+              <h3 class="">
+                پشتیبانی
+              </h3>
+              <hr class="bg-white mb-4">
+              <div class="d-flex flex-column text-right">
+                
+                <p>تلگرام</p>
+                <p>واتس اپ</p>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex flex-column justify-content-center text-right">
+            
+              <h3 class="">دنبال کنید</h3>
+              <hr class="bg-white mb-4">
+              <div class="d-flex flex-column text-right">
+                <p>اینستاگرام</p>
+                <p>تلگرام</p>
+                <p>واتس اپ</p>
+              </div>
+            </div>
+            
+            <div class="col-md-2 d-flex flex-column justify-content-center text-right">
+              
+              <h3 class="">تماس با ما</h3>
+              <hr class="bg-white mb-4">
+              <p>+989392058055</p>
+              <p>Mybono@gmail.com</p>
+              <p>جانبازان غربی خیابان همت کوچه 6 پلاک 13</p>
+              
+            </div>
+            <div class="col-md-2 d-flex flex-column justify-content-center text-right">
+              <h1 class="mb-4">Bono</h1>
+              <p>بهترین ها را برای شما خواستاریم</p>
+            </div>
+            
+        </div>
+        <div class="text-center bg-dark text-white pb-3">All rights reserved &copy 2019</div>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

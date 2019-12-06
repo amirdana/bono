@@ -19,9 +19,9 @@
 body {
   overflow-x: hidden;
   transition-property: all;
-
+  margin: 0px 0px;
   line-height: 1.8em;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-family: "IranianSans", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
@@ -34,7 +34,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: rgba(255, 255, 255, 0.432) 1px solid;
+  border-bottom: rgba(255, 255, 255, 0.247) 1px solid;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -164,7 +164,7 @@ body {
 }
 .how-1 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -178,7 +178,7 @@ body {
 }
 .how-2 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -191,9 +191,10 @@ body {
 }
 .how-3 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
+
   text-align: center;
   div {
     width: 300px;
@@ -323,6 +324,17 @@ body {
 .gl-ct {
   display: flex;
   justify-content: space-around;
+  button {
+    margin-top: -52px;
+    font-family: "IranianSans", "Gill Sans", "Gill Sans MT", Calibri,
+      "Trebuchet MS", sans-serif;
+    font-size: 12px;
+  }
+  .modal-content {
+    button {
+      margin: 0;
+    }
+  }
 }
 
 .gallery {
@@ -469,72 +481,33 @@ body {
   }
   overflow-x: hidden;
 }
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+.myfooter {
+  width: 100%;
+  min-height: 350px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: cornsilk;
   }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  h3 {
+    font-weight: 900;
+    color: rgb(105, 176, 194);
+    font-family: "IranianSans", "Gill Sans", "Gill Sans MT", Calibri,
+      "Trebuchet MS", sans-serif;
+    font-size: 20px;
   }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+  p {
+    color: whitesmoke;
+    font-family: "IranianSans", "Gill Sans", "Gill Sans MT", Calibri,
+      "Trebuchet MS", sans-serif;
+    font-size: 13px;
   }
 }
 
@@ -574,6 +547,16 @@ body {
   }
 }
 @media only screen and (max-width: 767px) {
+  .myfooter {
+    h3,
+    p,
+    h1 {
+      text-align: center;
+    }
+    h3 {
+      margin-top: 50px;
+    }
+  }
   .head-right {
     margin-top: 0;
   }

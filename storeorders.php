@@ -88,8 +88,20 @@ mysqli_close($connnect);
 
 if(isset($_POST['cupponbtn'])){
   require("hostconf.php");
-  $cupponid = $_POST['thecuppon'];
-  $queryc = "INSERT INTO `discount`(`infulencer`) VALUES('$cupponid')";
+  $infudel = $_POST['thecuppon'];
+  $queryc = "INSERT INTO `discount`(`infulencer`) VALUES('$infudel')";
+  mysqli_query($connnect, $queryc);
+  mysqli_close($connnect);
+  header("location:storeorders.php");
+
+}
+?>
+<?php
+
+if(isset($_POST['cupdel'])){
+  require("hostconf.php");
+  $infudel = $_POST['cupname'];
+  $queryc = "DELETE FROM `discount` WHERE `discount`.`infulencer` = '$infudel'";
   mysqli_query($connnect, $queryc);
   mysqli_close($connnect);
   header("location:storeorders.php");
@@ -164,9 +176,9 @@ if(isset($_POST['cupponbtn'])){
         <input name="thecuppon" class="btn btn-outline-secondary text-white" type="text" placeholder="Enter Cuppon">
         <button class="btn btn-outline-danger" name="cupponbtn">submit</button>
       </form>
-      <form class="mt-2" method="" action="">
-        <input name="" class="btn btn-outline-secondary text-white" type="text" placeholder="Enter">
-        <button class="btn btn-outline-danger" name="">submit</button>
+      <form class="mt-2" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input name="cupname" class="btn btn-outline-secondary text-white" type="text" placeholder="Remove Cuppon">
+        <button class="btn btn-outline-danger" name="cupdel">submit</button>
       </form>
     </div>
   </div>
@@ -179,7 +191,6 @@ if(isset($_POST['cupponbtn'])){
         <div class="row ">
           <h1><?php if($_SESSION['pass'] == 'a80809090')  echo $tsales?> <span>T</span></h1>
         </div>
-        
       </div>
       <div class="col-md-3 myboxes text-white  mt-3">
       <div class="row ">
@@ -188,7 +199,6 @@ if(isset($_POST['cupponbtn'])){
         <div class="row ">
           <h1 ><?php if($_SESSION['pass'] == 'a80809090')  echo $msales?> <span>T</span> </h1>
         </div>
-
       </div>
       <div class="col-md-3 myboxes text-white  mt-3">
       <div class="row ">

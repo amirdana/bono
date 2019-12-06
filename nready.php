@@ -27,10 +27,12 @@
   <title>Document</title>
 </head>
 <body>
-  
+<div style="overflow-x:hidden;">
 <?php
   require('./mynavbar.html');
+  
   if($existingid!=0 && $payed!=0):?>
+  
     <div class="text-center p-5 mystatus d-flex align-items-center justify-content-center row">
       <div class="col-md-4 d-flex justify-content-center mt-5">
        <img   src="./srcs/check.png" alt="">
@@ -73,5 +75,6 @@
     </div>
 
   <?php endif?>
+  </div>
 </body>
 </html>

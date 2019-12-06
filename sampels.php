@@ -14,33 +14,81 @@
     <title>Document</title>
   </head>
   <body>
-  <div class="navi bg-info ">
-       <h1 >Bono</h1>
-       <ul class="navi-item">
-          <li onclick="()=>alert()" >خانه</li>
-				  <li>سفارش</li>
-          <li>پیگیری سفارش</li>
-          <li>نمونه ها</li>
-       </ul>
-      </div>
-    <div class="bg-dark pb-2 pt-3">
+ <?php require("./mynavbar.html") ?>
+    <div class="bg-dark pb-2 pt-5">
       <div class="gl-ct pt-5">
         <div class=" gallery">
           <img src="./srcs/hanger1.png" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
+            بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg mb-5">
+              
+              <div class="modal-content bg-info">
+              
+              <img src="./srcs/hanger1.png" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+              
+            </div>
+          </div>
         </div>
         <div class=" gallery2 ">
           <img src="./srcs/hanger2.jpg" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example2-modal-lg">
+           بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example2-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content bg-info">
+              <img src="./srcs/hanger2.jpg" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="gl-ct">
         <div class=" gallery3 ">
           <img src="./srcs/pexels-photo-1434612.png" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example3-modal-lg">
+          بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example3-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content bg-info">
+              <img src="./srcs/pexels-photo-1434612.png" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class=" gallery4 ">
           <img src="./srcs/pexels-photo-1534924.png" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example4-modal-lg">
+          بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example4-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content bg-info">
+              <img src="./srcs/pexels-photo-1534924.png" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+   
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

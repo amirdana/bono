@@ -13,11 +13,13 @@ if(isset($_POST['dissub'])){
 		
 		mysqli_free_result($result);
 		$istrue = 0;
+		$istrue1 = [];
 
 		
 
 		foreach($posts as $pers => $val){
-			if($val['infulencer'] == $_POST['off']){$istrue = -20000;}
+			array_push($istrue1 , $val['infulencer']) ;
+			if(in_array(htmlentities($_POST['off']),$istrue1) ){$istrue = -20000;};
 		
 		}
 		
@@ -57,15 +59,7 @@ if(isset($_POST['dissub'])){
   </head>
 
   <body class="bg-light">
-	<div class="navi bg-info">
-       <h1 >Bono</h1>
-       <ul class="navi-item">
-          <li onclick="()=>alert()" >خانه</li>
-				  <li>سفارش</li>
-          <li>پیگیری سفارش</li>
-          <li>نمونه ها</li>
-       </ul>
-      </div>
+	<?php require("./mynavbar.html")?>
     <div class="container pt-5 fontff">
       <div class="py-5 text-center mt-2">
         <h2>ثبت سفارش</h2>
