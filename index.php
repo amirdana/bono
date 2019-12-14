@@ -1,8 +1,5 @@
 <?php
-
 session_start();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,13 +24,6 @@ session_start();
           <li>نمونه ها</li>
        </ul>
       </div>
-
-
-
-      
-
-
-
 
       <div data-toggle="tooltip"
       data-placement="top" title="سوالی دارید؟ از ما بپرسید" class="support ">
@@ -103,7 +93,7 @@ session_start();
       <div class="q-cnt ">
         <img class="qouti" src="srcs/Frame 3.svg" alt="">
       </div>       
-         <div id="carouselExampleIndicators" class="carousel slide slidder " data-ride="carousel">           
+         <div id="carouselExampleIndicators" class="carousel slide slidder mb-5" data-ride="carousel">           
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active slidder-t">            
                 <div>
@@ -139,7 +129,8 @@ session_start();
                   </div>
               <div>
               <h4>سپیده همدانی</h4>
-              <p>همه چی عالی بود مرسی</p>           </div>
+              <p>همه چی عالی بود مرسی</p>           
+              </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
