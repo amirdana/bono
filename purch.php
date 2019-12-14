@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
   $name = $_POST['name'];
   $userid = $phone;
   $fprc = $_POST['fprc'];
-  
+  $myemail = $_POST['myemail'];
   $ex = explode('.',$fl['name']);
   $gg =strtolower(end($ex));
 
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
 
       require("hostconf.php");
 
-      $query="INSERT INTO `customers`(name,phone,delever,frame,city,subcity,addres,image,usserid,zip,des) VALUES('$name','$phone','$delever','$frame','$city','$subcity','$addres','$image','$userid','$zip','$des')";
+      $query="INSERT INTO `customers`(name,phone,delever,frame,city,subcity,addres,image,usserid,zip,des,email) VALUES('$name','$phone','$delever','$frame','$city','$subcity','$addres','$image','$userid','$zip','$des','$myemail')";
 
     if(mysqli_query($connnect,$query)){
       echo "submited";

@@ -116,6 +116,13 @@ if(isset($_POST['dissub'])){
                 </div>
               </div>
             </div>
+						<div class="mb-3">
+              <label for="email">ایمیل<span class="text-muted"></span></label>
+              <input name="myemail" type="email" class="form-control text-right" id="email" placeholder="amirkiani@gmail.com" required>
+              <div class="invalid-feedback">
+                ایمیل خود را وارد کنید
+              </div>
+						</div>
             <div class="mb-3">
               <label for="phone">شماره موبایل - بدون صفر اول<span class="text-muted"></span></label>
               <input name="phone" type="number" class="form-control text-right" id="phone" placeholder="933*******" required>
@@ -123,6 +130,7 @@ if(isset($_POST['dissub'])){
                 شماره موبایل خود را وارد کنید
               </div>
 						</div>
+            
 						<div class="custom-control custom-checkbox ">
 								<input							
 									name="delever"

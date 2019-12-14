@@ -108,6 +108,21 @@ if(isset($_POST['cupdel'])){
 
 }
 ?>
+
+
+<?php
+
+if(isset($_POST['delimg'])){
+ 
+  if (!unlink($_POST['imgaddres'])) {
+    echo ("Error deleting");
+  } else {
+    echo ("Deleted");
+    header("location:storeorders.php");
+  }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,13 +173,15 @@ if(isset($_POST['cupdel'])){
  
   <div class="flex-column d-flex justify-content-center p-5">
   <div class="row d-flex justify-content-between">
-  
+  <?php if($_SESSION['pass'] == 'a80809090'):?>
     <div class="col-md-12 visitors mt-2" >
+    
       <div class="mycan">
     <canvas id="myChart"></canvas>
     </div>
-    </div>
    
+    </div>
+    <?php endif ?>
 
   </div>
   
@@ -233,6 +250,12 @@ if(isset($_POST['cupdel'])){
           <div>
           <a target="_blank" href="<?php echo $ins['image']  ?>"> عکس کاربر</a>
           <a class=" <?php if(file_exists('donefiles/'.$ins['phone'].'.jpeg')){echo 'bg-success';} ?>" target="_blank" href="<?php echo "/biz/donefiles/".$ins['phone'].'.jpeg'  ?>">فایل نهایی</a>
+            <?php if($_SESSION['pass'] == 'a80809090'):?>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+              <input name="imgaddres" type="hidden" value="<?php echo $ins['image']  ?>">
+              <button class="btn btn-sm btn-outline-danger mt-5" name="delimg"></button>
+            </form>
+            <?php endif?>
           </div>
         </div>
         <div class="col-md-3 order-box">
@@ -252,8 +275,9 @@ if(isset($_POST['cupdel'])){
         </div>
         <div class="col-md-3 order-box text-dark <?php echo ($ins['payedamount']!=0)? "success" : "failed";  ?>">
           <h1><?php echo $ins['id'] ?> ID</h1>
-          <h3><?php  echo ($ins['payedamount']!=0)? "پرداخت شد" : "ناموفق" ?></h3>
+          <h3><?php  echo ($ins['payedamount']!=0)? "پرداخت شد" : "ناموفق" ?></h3>                     
           <?php echo $_SESSION['pass'] == 'a80809090'?  '<h2>'.$ins['payedamount'].' t'.'</h2>': '' ?>
+          <?php echo $_SESSION['pass'] == 'a80809090'?  '<small>'.$ins['date'].'</small>': '<h4>'.$ins['date'].'</h4>' ?>
         </div>
       </div>
     </div>
@@ -304,6 +328,9 @@ if(isset($_POST['cupdel'])){
   }
 </script>
 
+<script>
+
+</script>
 </body>
 </html>
 
