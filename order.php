@@ -9,25 +9,19 @@ if(isset($_POST['dissub'])){
 		$result = mysqli_query($connnect, $query);
 		
 		$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
-		
-		
+	
 		mysqli_free_result($result);
 		$istrue = 0;
 		$istrue1 = [];
-
-		
 
 		foreach($posts as $pers => $val){
 			array_push($istrue1 , $val['infulencer']) ;
 			if(in_array(htmlentities($_POST['off']),$istrue1) ){$istrue = -20000;};
 		
 		}
-		
 		mysqli_close($connnect);
-
 }
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -36,15 +30,10 @@ if(isset($_POST['dissub'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="./bootstrap.min.css">
     <title>Checkout example for Bootstrap</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
-
-    
-    
   </head>
 
   <body class="bg-light">
@@ -53,7 +42,6 @@ if(isset($_POST['dissub'])){
       <div class="py-5 text-center mt-2">
         <h2>ثبت سفارش</h2>
       </div>
-
       <div class="row text-right">
         <div class="col-md-4 ml-auto  mb-4">
           <ul class="list-group mb-3">

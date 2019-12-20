@@ -117,8 +117,19 @@ if(isset($_POST['delimg'])){
   if (!unlink($_POST['imgaddres'])) {
     echo ("Error deleting");
   } else {
-    echo ("Deleted");
-    header("location:storeorders.php");
+    echo ('
+    <div class="toast fade show m-auto" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        Deleted successfully.
+      </div>
+    </div>');
+    
   }
 
 }
@@ -323,8 +334,9 @@ if(isset($_POST['delimg'])){
 </script>
 
 <script>
+
   countdown = () =>{
-   
+    $('.toast').toast();
   }
 </script>
 
