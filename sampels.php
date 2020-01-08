@@ -87,6 +87,40 @@
           </div>
         </div>
       </div>
+      <div class="gl-ct ">
+      <div class=" gallery3 ">
+          <img src="./srcs/hang-5.png" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example5-modal-lg">
+          بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example5-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content bg-info">
+              <img src="./srcs/hang-5.png" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" gallery4 ">
+          <img src="./srcs/hang6.png" alt="" />
+          <button class="btn btn-sm btn-dark" data-toggle="modal" data-target=".bd-example6-modal-lg">
+          بزرگ نمایی
+          </button>
+
+          <div class="modal fade bd-example6-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content bg-info">
+              <img src="./srcs/hang6.png" alt="" />
+              <button type="button" class="btn btn-lg btn-info " data-dismiss="modal">بستن</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
    
     <script

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ session_start();
   <body>
     <header>
       <div class="navi">
-       <h1 >Bono</h1>
+       <h1>Bono</h1>
        <ul class="navi-item">
           <li onclick="()=>alert()" >خانه</li>
 				  <li>سفارش</li>
@@ -31,7 +32,7 @@ session_start();
          class="" src="srcs/support.svg" alt="online-support">
       </div>  
       <div class="head-bg">
-        <div class="row flex-fill ">
+        <div class="row  kk">
             <div class="head-right col-md-6  order-1" data-aos-easing="ease" data-aos="slide-left" 
             data-aos-duration="1000" >
                 <div class="promo-cnt">
@@ -43,7 +44,7 @@ session_start();
               </div>
           <div  
           class="head-left col-md-6 ">
-            <img src="srcs/New Project (1).png" alt="example" />
+            <img src="srcs/New Project (11).png" alt="example" />
           </div>
         </div>
       </div>
@@ -76,7 +77,7 @@ session_start();
               <div class="h-cnt">
               <h4>انتخاب عکس</h4>
               <hr>
-              <p>در این مرحله عکس تکی یا چند نفره مورد علاقه خود را روی سایت بارگذاری میکنید</p>
+              <p>در این مرحله عکس تکی  مورد علاقه خود را روی سایت بارگذاری میکنید</p>
             </div>
           </div>
         </div>
@@ -268,33 +269,59 @@ session_start();
 </body>
 </html>
 <?php
-if(isset($_SESSION['ip'])==false){
+// if(isset($_SESSION['ip'])==false){
 	
-	require("hostconf.php");
+// 	require("hostconf.php");
 
-	$query2='SELECT volume FROM `visits` WHERE `visits`.`id` ='.date('d');
+// 	$query2='SELECT volume FROM `visits` WHERE `visits`.`id` ='.date('d');
 	
-	$result2 = mysqli_query($connnect, $query2);
+// 	$result2 = mysqli_query($connnect, $query2);
 	
-	$posts2 = mysqli_fetch_assoc($result2);
+// 	$posts2 = mysqli_fetch_assoc($result2);
 	
-	mysqli_free_result($result2);
+// 	mysqli_free_result($result2);
 	
-	$addup=$posts2['volume']+1;
+// 	$addup=$posts2['volume']+1;
 	
 	
-	$query2="UPDATE `visits` SET `volume` = $addup WHERE `visits`.`id` =".date('d');
+// 	$query2="UPDATE `visits` SET `volume` = $addup WHERE `visits`.`id` =".date('d');
 	
-	if(mysqli_query($connnect,$query2)){
+// 	if(mysqli_query($connnect,$query2)){
 	
-	}else{echo mysqli_error($connnect);};
+// 	}else{echo mysqli_error($connnect);};
 	
-			if(mysqli_query($connnect,$query2)){
+// 			if(mysqli_query($connnect,$query2)){
 	
-			}else{echo mysqli_error($connnect);}
+// 			}else{echo mysqli_error($connnect);}
 	
-	mysqli_close($connnect);
+// 	mysqli_close($connnect);
 
-	$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
+// 	$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
 	
-}
+// }
+
+	
+require("hostconf.php");
+
+$query2='SELECT volume FROM `visits` WHERE `visits`.`id` ='.date('d');
+
+$result2 = mysqli_query($connnect, $query2);
+
+$posts2 = mysqli_fetch_assoc($result2);
+
+mysqli_free_result($result2);
+
+$addup=$posts2['volume']+1;
+
+
+$query2="UPDATE `visits` SET `volume` = $addup WHERE `visits`.`id` =".date('d');
+
+if(mysqli_query($connnect,$query2)){
+
+}else{echo mysqli_error($connnect);};
+
+    if(mysqli_query($connnect,$query2)){
+
+    }else{echo mysqli_error($connnect);}
+
+mysqli_close($connnect);

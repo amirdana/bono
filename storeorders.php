@@ -177,27 +177,38 @@ if(isset($_POST['delimg'])){
        background:#27293d;
        border-radius:10px;
      }
+     .mystorehead {
+       margin:auto;
+        width: 300px;
+        height: 100px;
+        background:#27293d;
+        border-radius:5px;
+        text-align:center;
+        margin-top:4v 0px;
+        color:white;
+        
+      }
+      .mystorehead h1{
+        font-size:50px
+      }
     </style>
   <title>Document</title>
 </head>
 <body class="storbg">
- 
+  <div class="mystorehead d-flex align-items-center justify-content-center mt-4">
+    <h1 class="text-center m-auto">Bono</h1>
+  </div>
   <div class="flex-column d-flex justify-content-center p-5">
   <div class="row d-flex justify-content-between">
   <?php if($_SESSION['pass'] == 'a80809090'):?>
-    <div class="col-md-12 visitors mt-2" >
-    
+    <div class="col-md-12 visitors " >
       <div class="mycan">
     <canvas id="myChart"></canvas>
     </div>
-   
     </div>
     <?php endif ?>
-
   </div>
-  
   <?php if($_SESSION['pass'] == 'a80809090'):?>
-
     <div class="row d-flex justify-content-center  ">
     <div class="cuppon  mt-5 p-2">
       <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -210,7 +221,6 @@ if(isset($_POST['delimg'])){
       </form>
     </div>
   </div>
-
   <div class="row  mt-5 d-flex justify-content-between ">
       <div class="col-md-3 myboxes text-white mt-3">
         <div class="row ">
@@ -235,11 +245,9 @@ if(isset($_POST['delimg'])){
         <div class="row ">
           <h1 ><?php if($_SESSION['pass'] == 'a80809090')  echo $dsales?> <span>T</span></h1>
         </div>
-
       </div>
       <div class="col-md-2 myboxes text-white  mt-3">
       <div class="row ">
-         
           <h1 class="text-white"><?php echo date('Y-m-d')?></h1>
         </div>
         <div class="row ">
@@ -248,7 +256,6 @@ if(isset($_POST['delimg'])){
         <div class="row mt-2 ">
         <button class="btn btn-sm btn-outline-danger" onclick="countdown()">CountDown</button>
         </div>
-
       </div>      
   </div>
   <?php endif?>
@@ -272,7 +279,7 @@ if(isset($_POST['delimg'])){
         <div class="col-md-3 order-box">
         
           <h4>تحویل : <?php echo ($ins['delever']=="on")? "بله" : "خیر" ?> </h4>
-          <h4>قاب : <?php echo ($ins['frame']=="on")? "بله" : "خیر" ?> </h4>
+          <h4>قاب : <?php echo $ins['frame'] ?> </h4>
         </div>
         <div class="col-md-3 order-box">
           <div>

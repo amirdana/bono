@@ -5,10 +5,10 @@ if(isset($_POST['submit'])){
   if($fl['size']>20000000){
     echo '<h1>حجم فایل زیاد است</h1>';
   }else{
-  $phone = $_POST['phone'];
+  $phone = htmlentities($_POST['phone']);
  
   if(isset($_POST['delever'])){
-    $delever = $_POST['delever'];
+    $delever = htmlentities($_POST['delever']);
   }else{$delever = "off";}
 
   if(isset($_POST['frame'])){

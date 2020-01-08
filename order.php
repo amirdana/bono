@@ -32,7 +32,7 @@ if(isset($_POST['dissub'])){
     <meta name="author" content="">
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="./bootstrap.min.css">
-    <title>Checkout example for Bootstrap</title>
+    <title>بونو - ثبت سفارش</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
   </head>
 
@@ -62,13 +62,9 @@ if(isset($_POST['dissub'])){
             <li class="list-group-item d-flex justify-content-between lh-condensed">
 								<span class="text-muted" id="delever">0</span>
 								<div>
-									<h6 class="my-0"> تحویل فیزیکی </h6>
+									<h6 class="my-0">چاپ و تخته شاسی </h6>
             </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-								<span class="text-muted" id="frame">0</span>
-								<div>
-									<h6 class="my-0"> خرید قاب </h6>
-            </li>
+            
             <li class="list-group-item d-flex justify-content-between bg-light">
 								<span class="text-danger" id="discount"><?php if(isset($_POST['dissub'])){echo $istrue;} else echo '0'?></span>
               <div class="text-danger">
@@ -119,34 +115,34 @@ if(isset($_POST['dissub'])){
               </div>
 						</div>
             
-						<div class="custom-control custom-checkbox ">
+						<div class="custom-control custom-checkbox mb-4">
 								<input							
 									name="delever"
 									type="checkbox"
 									class="custom-control-input"
 									id="customCheck3"									
 								/>
-								<label onclick="delever()" class="custom-control-label mt-3" for="customCheck3"> تمایل به دریافت فیزیکی دارید؟ - 25 هزار تومان</label>
+								<label onclick="delever()" class="custom-control-label mt-3" for="customCheck3"> تمایل به دریافت فیزیکی دارید؟</label>
 									</label
 								>
+							
 							</div>
-							<div class="custom-control custom-checkbox mb-5">
-								<input
-									name="frame"
-									type="checkbox"
-									class="custom-control-input"
-									id="customCheck2"									
-								/>
-								<label onclick="frame()" class="custom-control-label mt-3" for="customCheck2">تمایل به دریافت قاب عکس دارید؟ - 50 هزار تومان</label>
-									</label
-								>
+							<div class="form-group" onchange="frame()">
+								<label   for="sel1">Select list:</label>
+								<select disabled class="form-control" id="sel1" name="frame">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
 							</div>
+						
 						<div class="row">
 								<div  class="col-md-3 mb-3">
-										<label for="zip">کد پستی (اختیاری)</label>
+										<label for="zip">کد پستی</label>
 										<input disabled name="zip" type="text" class="form-control text-right" id="zip" placeholder="برای تحویل فیزیکی">
 										<div class="invalid-feedback">
-											Zip code required.
+											کد پستی خود را وارد کنید
 										</div>
 									</div>
 								<div class="col-md-5 mb-3">
@@ -172,13 +168,13 @@ if(isset($_POST['dissub'])){
               </div>
             </div>
             <div class="mb-3">
-              <label for="des"> توضیحات - اختیاری</label>
+              <label for="des"> توضیحات شما - اختیاری</label>
               <input type="text" name="des" class="form-control text-right" id="des"  >             
             </div> 
             <hr class="mb-4">         
 							<div class="row mt-3 text-right">						
 									<div class="col-12">
-										<p class="m-0 mb-3">برای بارگذاری عکس روی بخش زیر کلیک یا فایل را (درگ / دراپ) کنید *</p>
+										<p class="m-0 mb-3">برای بارگذاری عکس خود روی بخش زیر کلیک یا فایل را (درگ / دراپ) کنید *</p>
 									</div>
 								</div>
 								<div class="row ">
@@ -197,7 +193,7 @@ if(isset($_POST['dissub'])){
         </div>
       </div>
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2019 Bonzo</p>
+        <p class="mb-1">&copy; 2019 Bono</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
@@ -206,93 +202,88 @@ if(isset($_POST['dissub'])){
       </footer>
     </div>
 		<script>
+			const frame = () =>{
+				let val = document.getElementById("sel1").value;
+				console.log(document.getElementById("sel1").value);
+				if(val == 1){
+							if(true){
+						document.getElementById("delever").innerHTML = '16000'
+						
+							
+					}
+						else {document.getElementById("delever").innerHTML = '0'
+					
+						}
+						document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("discount").innerHTML)
+						}
+				if(val == 2){
+							if(true){
+						document.getElementById("delever").innerHTML = '26000'
+						
+							
+					}
+						else {document.getElementById("delever").innerHTML = '0'
+					
+						}
+						document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("discount").innerHTML)
+						}
+				if(val == 3){
+							if(true){
+						document.getElementById("delever").innerHTML = '65000'
+						
+							
+					}
+						else {document.getElementById("delever").innerHTML = '0'
+					
+						}
+						document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("discount").innerHTML)
+						}
+					}
 			const delever = () =>{
-			
+		
 			if(document.getElementById("customCheck3").checked == false ){
 				document.getElementById("city").removeAttribute("disabled");
 				document.getElementById("subcity").removeAttribute("disabled");
 				document.getElementById("address").removeAttribute("disabled");
 				document.getElementById("zip").removeAttribute("disabled");
+				document.getElementById("sel1").removeAttribute("disabled");
 			}
 			else{
-				if(document.getElementById("customCheck2").checked == false){
+				
 				document.getElementById("city").setAttribute("disabled", "");
 				document.getElementById("subcity").setAttribute("disabled", "");
 				document.getElementById("address").setAttribute("disabled", "");
 				document.getElementById("zip").setAttribute("disabled", "");
-				}
+				document.getElementById("sel1").setAttribute("disabled", "");
+				
+			}
+			document.getElementById("delever").innerHTML = '16000'
+			document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("discount").innerHTML)
+
 			}
 
-			if(document.getElementById("delever").innerHTML == '0'){
-				document.getElementById("delever").innerHTML = '25000'
-				
-					
-			}
-				else {document.getElementById("delever").innerHTML = '0'
 			
-				}
-				document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("frame").innerHTML)+Number(document.getElementById("discount").innerHTML)
-			}
-
-			const frame = () =>{
-				if(document.getElementById("customCheck2").checked == false ){
-				document.getElementById("city").removeAttribute("disabled");
-				document.getElementById("subcity").removeAttribute("disabled");
-				document.getElementById("address").removeAttribute("disabled");
-				document.getElementById("zip").removeAttribute("disabled");
-			}
-			else{
-				if(document.getElementById("customCheck3").checked == false){
-				document.getElementById("city").setAttribute("disabled", "");
-				document.getElementById("subcity").setAttribute("disabled", "");
-				document.getElementById("address").setAttribute("disabled", "");
-				document.getElementById("zip").setAttribute("disabled", "");
-				}
-			}
-			if(document.getElementById("frame").innerHTML == '0'){
-				document.getElementById("frame").innerHTML = '50000'
-				
-			}
-				else {document.getElementById("frame").innerHTML = '0'}
-				document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("frame").innerHTML)+Number(document.getElementById("discount").innerHTML)
-
-			}
-			window.addEventListener("load", () => {
-				document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("frame").innerHTML)+Number(document.getElementById("discount").innerHTML)
-
-			}
-			)
 		</script>
 		
 
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         'use strict';
-
         window.addEventListener('load', function() {
-					
-					if(document.getElementById("customCheck3").checked == true || document.getElementById("customCheck2").checked == true){
+					document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("discount").innerHTML)
+					if(document.getElementById("customCheck3").checked == true){
 						location.reload();
-					
 					}
-					
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
           var forms = document.getElementsByClassName('needs-validation');
 
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
 
-							if(document.getElementById("customCheck2").checked == true ){
-								document.getElementById("frame").innerHTML = '50000'
-							}else{document.getElementById("frame").innerHTML = '0'}
-							
 							if(document.getElementById("customCheck3").checked == true ){
 								document.getElementById("delever").innerHTML = '25000'
 							}else{document.getElementById("delever").innerHTML = '0'}
-							document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML)+Number(document.getElementById("frame").innerHTML)+Number(document.getElementById("discount").innerHTML)
-							
+							document.getElementById("total").innerHTML = 96000 + Number(document.getElementById("delever").innerHTML) + Number(document.getElementById("discount").innerHTML)
 
 							document.getElementById("fprc").value = Number(document.getElementById("total").innerHTML);
 							if(document.getElementById("phone").value.charAt(0)==0 && document.getElementById("phone").value != ''){
@@ -309,7 +300,9 @@ if(isset($_POST['dissub'])){
             }, false);
           });
         }, false);
-      })();
+			})();
+			
+			
     </script>
 		
 	</body>

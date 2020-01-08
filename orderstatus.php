@@ -24,7 +24,9 @@
           $ordernum = $_POST['stat'];
             if(file_exists('donefiles/'.$ordernum.'.jpeg')){
                echo '<a class="bg-success p-2 mb-2 text-white" href="donefiles/'.$ordernum.'.jpeg" download>دانلود فایل شما</a>';
-             
+               session_start();
+               $_SESSION['orderid'] = $ordernum;
+               header("Location: ready.php");
                 
             }else{
               session_start();
