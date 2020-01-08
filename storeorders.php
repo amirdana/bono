@@ -279,7 +279,7 @@ if(isset($_POST['delimg'])){
         <div class="col-md-3 order-box">
         
           <h4>تحویل : <?php echo ($ins['delever']=="on")? "بله" : "خیر" ?> </h4>
-          <h4>قاب : <?php echo $ins['frame'] ?> </h4>
+          <h4>قاب : <?php echo ($ins['frame'] == "off")? "خیر" : $ins['frame']?> </h4>
         </div>
         <div class="col-md-3 order-box">
           <div>

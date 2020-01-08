@@ -19,10 +19,10 @@ session_start();
       <div class="navi">
        <h1>Bono</h1>
        <ul class="navi-item">
-          <li onclick="()=>alert()" >خانه</li>
-				  <li>سفارش</li>
-          <li>پیگیری سفارش</li>
-          <li>نمونه ها</li>
+          <li onclick="window.open('index.php')" >خانه</li>
+				  <li onclick="window.open('order.php')">سفارش</li>
+          <li onclick="window.open('orderstatus.php')">پیگیری سفارش</li>
+          <li onclick="window.open('sampels.php')">نمونه ها</li>
        </ul>
       </div>
 
@@ -178,7 +178,7 @@ session_start();
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="card-body">
-          اثر شما بعد از ثبت سفارش نهایتا طی دو تا سه روز آماده خواهد شد و قابل دانلود است ، ولی اگر دریافت فیزیکی را هم درخواست کرده بودید حدااکثر یک هفته به زمان فوق اضافه میشه 
+          اثر شما بعد از ثبت سفارش نهایتا طی دو تا سه روز آماده خواهد شد و قابل دانلود است ، ولی اگر دریافت فیزیکی را هم درخواست کرده بودید حداکثر چهار روز به زمان فوق اضافه میشه 
           </div>
         </div>
       </div>

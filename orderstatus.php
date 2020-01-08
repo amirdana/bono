@@ -6,7 +6,7 @@
  
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Signin Template for Bootstrap</title>
+    <title> بونو - پیگیری سفارش</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="signin.css" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="orderstats text-center">
       
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin">
-    <h2>bonzo</h2>
+    <h2>bono</h2>
     <h5 class=" mb-3 font-weight-normal">کد پیگری یا شماره موبایل خود را (بدون صفر اول) وارد کنید</h5>
         <?php
           if(isset($_POST['sub'])){
